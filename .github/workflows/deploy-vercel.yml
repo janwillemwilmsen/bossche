@@ -1,26 +1,44 @@
-name: Deploy to Vercel
-
 on:
   push:
-  workflow_dispatch:
+  pull_request:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "30 */6 * * *"
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout results
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           ref: refs/heads/results
           path: results
-      - name: Checkout speedlify
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           path: default
-      - name: Copy existing results
-        run: cp -r results/. default/_data
+      - run: |
+          cp -r results/. default/_data
+      - run: |
+          mkdir .vercel
+          echo $VERCEL_PROJECT > .vercel/project.json
+          npx vercel --token $VERCEL_TOKEN
+        working-directory: default
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT: ${{ secrets.VERCEL_PROJECT }}
+  deployToProduction:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/Thew'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: refs/heads/results
+          path: results
+      - uses: actions/checkout@v2
+        with:
+          path: default
+      - run: |
+          cp -r results/. default/_data
       - run: |
           mkdir .vercel
           echo $VERCEL_PROJECT > .vercel/project.json
