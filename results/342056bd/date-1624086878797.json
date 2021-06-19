@@ -1,0 +1,50 @@
+{
+  "url": "https://docusaurus.io/",
+  "requestedUrl": "https://v2.docusaurus.io/",
+  "timestamp": 1624087185561,
+  "ranks": {
+    "hundos": 5,
+    "performance": 5,
+    "accessibility": 4,
+    "cumulative": 5
+  },
+  "lighthouse": {
+    "version": "6.5.0",
+    "performance": 0.78,
+    "accessibility": 0.98,
+    "bestPractices": 0.93,
+    "seo": 0.94,
+    "total": 363
+  },
+  "firstContentfulPaint": 3289.305,
+  "speedIndex": 3289.305,
+  "largestContentfulPaint": 3589.3050000000003,
+  "totalBlockingTime": 300.99999999999955,
+  "cumulativeLayoutShift": 0.08017087131076389,
+  "timeToInteractive": 4600.305,
+  "maxPotentialFirstInputDelay": 373,
+  "timeToFirstByte": 27.284000000000002,
+  "weight": {
+    "summary": "26 requests • 291 KiB",
+    "total": 297595,
+    "image": 63712,
+    "imageCount": 10,
+    "script": 200785,
+    "scriptCount": 8,
+    "document": 10141,
+    "font": 0,
+    "fontCount": 0,
+    "stylesheet": 21267,
+    "stylesheetCount": 2,
+    "thirdParty": 126777,
+    "thirdPartyCount": 15
+  },
+  "run": {
+    "number": 3,
+    "total": 3
+  },
+  "axe": {
+    "passes": 391,
+    "violations": 5
+  }
+}
