@@ -1,0 +1,50 @@
+{
+  "url": "https://gohugo.io/",
+  "requestedUrl": "https://gohugo.io/",
+  "timestamp": 1624868236829,
+  "ranks": {
+    "hundos": 3,
+    "performance": 4,
+    "accessibility": 5,
+    "cumulative": 4
+  },
+  "lighthouse": {
+    "version": "6.5.0",
+    "performance": 0.96,
+    "accessibility": 0.98,
+    "bestPractices": 0.93,
+    "seo": 1,
+    "total": 387
+  },
+  "firstContentfulPaint": 1355.902,
+  "speedIndex": 1603.2448517769576,
+  "largestContentfulPaint": 2361.114,
+  "totalBlockingTime": 33.5,
+  "cumulativeLayoutShift": 0.03874496883816189,
+  "timeToInteractive": 3971.825500000001,
+  "maxPotentialFirstInputDelay": 101,
+  "timeToFirstByte": 4.009,
+  "weight": {
+    "summary": "32 requests • 445 KiB",
+    "total": 455644,
+    "image": 160966,
+    "imageCount": 17,
+    "script": 156692,
+    "scriptCount": 5,
+    "document": 10690,
+    "font": 86750,
+    "fontCount": 5,
+    "stylesheet": 40064,
+    "stylesheetCount": 2,
+    "thirdParty": 224198,
+    "thirdPartyCount": 21
+  },
+  "run": {
+    "number": 3,
+    "total": 3
+  },
+  "axe": {
+    "passes": 655,
+    "violations": 31
+  }
+}
